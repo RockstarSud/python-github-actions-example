@@ -40,3 +40,6 @@ Now, In order to deploy any kind of application to heroku you need a PROC file.
 We are using the "unicorn" server here. Paste the below command in the file.
  web gunicorn --pythonpath src app:app
  Now try committing the code.
+
+Once successfully deployed. It will look like:
+![image](https://user-images.githubusercontent.com/25689468/151556580-cfd72b84-e601-4316-8b79-a00fb071e79e.png)
