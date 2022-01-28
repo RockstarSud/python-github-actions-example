@@ -36,4 +36,7 @@ Now, put the following code in your workflow:
         run: |
           git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
           git push heroku HEAD:master -f
-   
+Now, In order to deploy any kind of application to heroku you need a PROC file.
+We are using the "unicorn" server here. Paste the below command in the file.
+ web gunicorn --pythonpath src app:app
+ Now try committing the code.
