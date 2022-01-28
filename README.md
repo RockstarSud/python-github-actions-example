@@ -22,3 +22,8 @@ For that I had to make a new Github action in order to deploy the code to heroku
 Also, in workflow we are using ubuntu machine which is unaware of the heroku credentials and whenever there be the automated build I cant provide my heroku credentials everytime. For that I'll create a token. For that follow the below steps:
 Go to Documentation Page of Heroku --> Deployment --> Heroku CLI Commands --> heroku authorizations:create --> Run the command
 ![image](https://user-images.githubusercontent.com/25689468/151546800-fb7a9251-e876-4a79-80bb-2ca54ac9a098.png)
+I'll now put this Token in my GitHub repository which can then be used for authentication purpose. I can put this token in my workflow file as well but since my respoistory is public I'll save it somewhere else. Also If you don't want to showcase your application name you can do that as well with the below steps.
+To add, follow the below steps:
+Go to GitHub --> Settings --> Secrets --> Actions --> New Repository Secret --> 
+![image](https://user-images.githubusercontent.com/25689468/151550148-b9805cd5-8328-4edd-971b-b8f335eed00d.png)
+For API Name, https://desolate-atoll-01695.herokuapp.com/, use desolate-atoll-01695 in the HEROKU_API_NAME.
