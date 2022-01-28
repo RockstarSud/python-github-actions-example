@@ -15,5 +15,10 @@ Go to your systems cmd, run commands:
 
 ![image](https://user-images.githubusercontent.com/25689468/151544327-e425b2c2-ea0f-4f61-8932-5532e948b80d.png)
 ![image](https://user-images.githubusercontent.com/25689468/151544503-f3c8102f-c2f7-48ba-93d9-63d055f1ae98.png)
-This is the default page, but you need to deploy your application over here: 
+This is the default page, but you need to deploy your application over here:
 ![image](https://user-images.githubusercontent.com/25689468/151544550-002c8122-0ca9-4438-85b9-83bd4eaa8de9.png)
+Now, we want to deploy our updates on the above link. I can't do "git push heroku master" everytime. I want it to be automatically done when the build is passed ie., when the greencheck is available on the git hub repository.
+For that I had to make a new Github action in order to deploy the code to heroku.
+Also, in workflow we are using ubuntu machine which is unaware of the heroku credentials and whenever there be the automated build I cant provide my heroku credentials everytime. For that I'll create a token. For that follow the below steps:
+Go to Documentation Page of Heroku --> Deployment --> Heroku CLI Commands --> heroku authorizations:create --> Run the command
+![image](https://user-images.githubusercontent.com/25689468/151546800-fb7a9251-e876-4a79-80bb-2ca54ac9a098.png)
