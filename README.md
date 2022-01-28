@@ -15,4 +15,5 @@ Go to your systems cmd, run commands:
 
 ![image](https://user-images.githubusercontent.com/25689468/151544327-e425b2c2-ea0f-4f61-8932-5532e948b80d.png)
 ![image](https://user-images.githubusercontent.com/25689468/151544503-f3c8102f-c2f7-48ba-93d9-63d055f1ae98.png)
-This is the default page, but you need to deploy your application over here: ![image](https://user-images.githubusercontent.com/25689468/151544550-002c8122-0ca9-4438-85b9-83bd4eaa8de9.png)
+This is the default page, but you need to deploy your application over here: 
+![image](https://user-images.githubusercontent.com/25689468/151544550-002c8122-0ca9-4438-85b9-83bd4eaa8de9.png)
