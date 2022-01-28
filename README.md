@@ -27,3 +27,13 @@ To add, follow the below steps:
 Go to GitHub --> Settings --> Secrets --> Actions --> New Repository Secret --> 
 ![image](https://user-images.githubusercontent.com/25689468/151550148-b9805cd5-8328-4edd-971b-b8f335eed00d.png)
 For API Name, https://desolate-atoll-01695.herokuapp.com/, use desolate-atoll-01695 in the HEROKU_API_NAME.
+Now, put the following code in your workflow:
+    - name: Deploy to Heroku
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+        if: github.ref == 'refs/heads/master' && job.status == 'success'
+        run: |
+          git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
+          git push heroku HEAD:master -f
+   
